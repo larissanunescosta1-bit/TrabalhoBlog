@@ -7,6 +7,12 @@
    href="{{ route('categoria.create') }}">
    Nova Categoria
 </a>
+ <form class="mb-3" method="GET" action="{{ route('categoria.search') }}">
+        <div class="input-group">
+            <input id="filtro" name="filtro" class="form-control" type="text" placeholder="Pesquisar..." value="{{ $filtro ?? '' }}" autofocus>
+            <button class="btn btn-primary" type="submit">Pesquisar</button>
+        </div>
+    </form>
 <table class="table">
     <thead>
         <tr>

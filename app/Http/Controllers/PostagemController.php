@@ -12,10 +12,11 @@ class PostagemController extends Controller
 public function index(Request $request)
 {
     $filtro = $request->busca;
+     $categorias = Categoria::all();
 
     $postagens = Postagem::where('titulo', 'like', "%$filtro%")->orWhere('texto', 'like', "%$filtro%")->get();
 
-    return view('index', compact('postagens', 'filtro'));
+    return view('index', compact('postagens','categorias', 'filtro'));
 }
     //  cadastrar a  postagem
     public function create()

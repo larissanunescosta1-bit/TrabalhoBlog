@@ -3,22 +3,21 @@
 @section('conteudo')
 
 <h2>Nova Postagem</h2>
-
 <form action="{{ route('postagem.store') }}" method="POST">
     @csrf
     <div class="mb-3">
         <label>Título</label>
-        <input type="text" name="titulo" class="form-control">
+        <input type="text" name="titulo" class="form-control" required>
     </div>
 
     <div class="mb-3">
         <label>Autor</label>
-        <input type="text" name="autor" class="form-control">
+        <input type="text" name="autor" class="form-control" required>
     </div>
 
     <div class="mb-3">
         <label>Texto</label>
-        <textarea name="texto" class="form-control"></textarea>
+        <textarea name="texto" class="form-control"required></textarea>
     </div>
 
     <div class="mb-3">

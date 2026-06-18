@@ -81,7 +81,17 @@
 
         </div>
     </div>
-
+            <div class="card mb-4">
+                <div class="card-header">Categories</div>
+                <div class="card-body">
+                    <ul class="list-unstyled mb-0">
+                        @foreach($categorias as $categoria)
+                            <li><a href="#!">{{ $categoria->nome }}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        </div>
 </div>
 @endsection
 <hr>
